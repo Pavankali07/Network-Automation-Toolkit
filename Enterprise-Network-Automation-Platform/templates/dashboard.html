@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="actions">
+{% for name in ["inventory","backup","compliance","interfaces","bgp","ospf","drift"] %}
+<a href="/report/{{ name }}">{{ name|title }}</a>
+{% endfor %}
+</div>
+<section>
+<h2>Device Inventory</h2>
+<table>
+<tr><th>Name</th><th>Role</th><th>Site</th><th>Model</th><th>OS</th><th>Uptime</th></tr>
+{% for d in devices %}
+<tr><td>{{ d.name }}</td><td>{{ d.role }}</td><td>{{ d.site }}</td><td>{{ d.model }}</td><td>{{ d.os_version }}</td><td>{{ d.uptime }}</td></tr>
+{% endfor %}
+</table>
+</section>
+{% endblock %}

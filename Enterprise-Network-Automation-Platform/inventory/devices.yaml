@@ -1,0 +1,24 @@
+settings:
+  mock_mode: true
+
+devices:
+  - name: R1
+    host: 192.0.2.10
+    device_type: cisco_ios
+    role: core-router
+    site: Memphis-DC
+  - name: R2
+    host: 192.0.2.11
+    device_type: cisco_ios
+    role: edge-router
+    site: Memphis-DC
+  - name: SW1
+    host: 192.0.2.20
+    device_type: cisco_ios
+    role: core-switch
+    site: Memphis-DC
+  - name: SW2
+    host: 192.0.2.21
+    device_type: cisco_ios
+    role: access-switch
+    site: Memphis-Branch

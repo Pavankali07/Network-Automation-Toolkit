@@ -1,0 +1,25 @@
+rules:
+  - id: ssh
+    description: SSH version 2 enabled
+    pattern: "^ip ssh version 2$"
+    severity: high
+  - id: aaa
+    description: AAA enabled
+    pattern: "^aaa new-model$"
+    severity: high
+  - id: encryption
+    description: Password encryption enabled
+    pattern: "^service password-encryption$"
+    severity: medium
+  - id: ntp
+    description: NTP configured
+    pattern: "^ntp server "
+    severity: medium
+  - id: syslog
+    description: Remote syslog configured
+    pattern: "^logging host "
+    severity: medium
+  - id: snmp
+    description: SNMP configured
+    pattern: "^snmp-server "
+    severity: medium

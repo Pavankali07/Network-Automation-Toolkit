@@ -1,0 +1,4 @@
+{% extends "base.html" %}
+{% block content %}
+<section><h2>{{ title }}</h2><pre>{{ results|tojson(indent=2) }}</pre></section>
+{% endblock %}

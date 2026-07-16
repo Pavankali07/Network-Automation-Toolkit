@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<section>
+<h2>Deploy VLAN</h2>
+<form method="post">
+<label>VLAN ID <input type="number" name="vlan_id" min="1" max="4094" required></label>
+<label>VLAN Name <input type="text" name="vlan_name" required></label>
+{% for d in devices %}
+{% if "switch" in d.role %}
+<label><input type="checkbox" name="devices" value="{{ d.name }}"> {{ d.name }} - {{ d.site }}</label>
+{% endif %}
+{% endfor %}
+<button type="submit">Deploy</button>
+</form>
+</section>
+{% endblock %}
