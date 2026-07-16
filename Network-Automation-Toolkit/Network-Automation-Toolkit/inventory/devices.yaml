@@ -1,0 +1,18 @@
+devices:
+  - name: CORE-R1
+    host: 192.0.2.10
+    role: core-router
+    site: Memphis-DC
+    platform: cisco_ios
+
+  - name: EDGE-R1
+    host: 192.0.2.11
+    role: edge-router
+    site: Memphis-DC
+    platform: cisco_ios
+
+  - name: ACCESS-SW1
+    host: 192.0.2.20
+    role: access-switch
+    site: Memphis-Branch
+    platform: cisco_ios
